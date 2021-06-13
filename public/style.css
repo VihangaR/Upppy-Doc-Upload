@@ -1,0 +1,38 @@
+body {
+	background-color: #fff1e5;
+}
+.simple-nav {
+	padding: 10px 10px;
+	background-color: #ffeddc;
+}
+.simple-nav a {
+	font-size: 24px;
+	font-weight: 600;
+	color: #8338ec;
+}
+.simple-nav a:hover {
+	color: #6427b9;
+}
+.hero-title {
+	font-size: 2rem;
+	font-weight: 600;
+}
+.short-story-link {
+	margin: 10px 0;
+}
+.short-story-link:hover {
+	background-color: #c7a8f3;
+}
+#upload-button {
+	background-color: #8338ec;
+}
+#upload-button:hover {
+	background-color: #731deb;
+}
+#upload-button:focus {
+	outline: none;
+	box-shadow: none;
+}
+#uppy-modal {
+	max-height: 80vh;
+}

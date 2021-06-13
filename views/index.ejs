@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Short Stories</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			href="https://releases.transloadit.com/uppy/v1.29.1/uppy.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+		/>
+		<link rel="stylesheet" href="/style.css" />
+		<script
+			src="https://releases.transloadit.com/uppy/v1.29.1/uppy.min.js"
+			defer
+		></script>
+		<script src="/modalScript.js" defer></script>
+		<script src="/uppyScript.js" defer></script>
+	</head>
+	<body>
+		<nav class="simple-nav">
+			<div class="container">
+				<a href="/">Short Stories</a>
+			</div>
+		</nav>
+		<section class="hero">
+			<div class="hero-body">
+				<div class="container">
+					<div class="columns is-vcentered">
+						<div class="column">
+							<div class="title">Download and read short stories</div>
+							<div class="subtitle">Upload your own for others to read</div>
+						</div>
+						<div class="column">
+							<img src="/images/reading.svg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="hero">
+			<div class="hero-body">
+				<div class="container has-text-centered">
+					<button id="upload-button" class="button is-danger is-rounded">
+						Upload PDF
+					</button>
+				</div>
+			</div>
+		</section>
+		<section class="hero">
+			<div class="hero-body">
+				<div class="container has-text-centered">
+					<div class="is-size-2 has-text-weight-semibold">
+						List of Short Stories
+					</div>
+					<div
+						id="story-list"
+						class="box"
+						style="max-width: 400px; margin: 25px auto"
+					>
+						<% for(let i = 0; i < fileNames.length; i++) { %>
+						<div class="short-story-link">
+							<a href="/download/<%=fileNames[i]%>"><%= fileNames[i] %></a>
+						</div>
+						<% } %>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="modal">
+			<div class="modal-background"></div>
+			<div class="modal-content">
+				<div id="uppy-modal" class="card">
+					<div id="uppy-area"></div>
+				</div>
+			</div>
+			<button class="modal-close is-large" aria-label="close"></button>
+		</div>
+	</body>
+</html>
