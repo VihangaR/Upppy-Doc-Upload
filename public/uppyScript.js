@@ -19,7 +19,7 @@ uppy.use(Dashboard, {
 });
 // The way we'll be uploading (basically a POST request)
 uppy.use(XHRUpload, {
-	endpoint: "/uploadpdf",
+	endpoint: "https://vi-uppy.herokuapp.com/uploadpdf",
 	formData: true,
 	fieldName: "pdfUpload",
 });
@@ -31,7 +31,7 @@ uppy.use(Dropbox, {
 // Plugin to get file from a URL
 uppy.use(Url, {
 	target: Dashboard,
-	companionUrl: "https://companion.uppy.io/",
+	companionUrl: "https://vi-uppy.herokuapp.com",
 });
 // Executes when a file successfully uploads
 uppy.on("upload-success", (file, response) => {
