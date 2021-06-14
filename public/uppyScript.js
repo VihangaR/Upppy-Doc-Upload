@@ -45,5 +45,9 @@ uppy.on("upload-success", (file, response) => {
 		const childEl = tempNode.childNodes[0];
 		// Add it to the beginning of the story list
 		storyNode.insertBefore(childEl, storyNode.childNodes[0]);
+		document.querySelector("#notif").classList.remove("hidden");
+		setTimeout(() => {
+			document.querySelector("#notif").classList.add("hidden");
+		}, 3000);
 	}
 });

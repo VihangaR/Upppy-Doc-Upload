@@ -36,3 +36,13 @@ body {
 #uppy-modal {
 	max-height: 80vh;
 }
+#notif {
+	width: 200px;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 9999;
+}
+.hidden {
+	display: none;
+}
