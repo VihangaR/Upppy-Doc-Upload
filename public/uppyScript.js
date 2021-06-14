@@ -6,7 +6,7 @@ const Url = Uppy.Url;
 // Here we set the restrictions of the max file size (10MB), number of files allowed (1), and the type (pdf)
 const uppy = Uppy.Core({
 	restrictions: {
-		maxFileSize: 1000000,
+		maxFileSize: 10000000,
 		maxNumberOfFiles: 1,
 		allowedFileTypes: [".pdf"],
 	},
